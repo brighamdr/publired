@@ -17,11 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuarios', function () {
-    return 'Usuarios';
-});
+Route::get('/usuarios', 'UserController@index');
 
 Route::get('/usuarios/{id}', function ($id) {
     return "Mostrando detalle de usuario: {$id}";
 });
+
+Route::get('/saludo/{name}/{nickname?}','WelcomeUserController@index');
 

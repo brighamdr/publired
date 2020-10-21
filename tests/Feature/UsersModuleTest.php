@@ -32,6 +32,8 @@ class UsersModuleTest extends TestCase
         ->assertSee('Mostrando detalle de usuario: 5');
     }
 
+    
+
 
 
 }
