@@ -19,9 +19,7 @@ Route::get('/', function () {
 
 Route::get('/usuarios', 'UserController@index');
 
-Route::get('/usuarios/{id}', function ($id) {
-    return "Mostrando detalle de usuario: {$id}";
-});
+Route::get('/usuarios/{id}','UserController@show');
 
 Route::get('/saludo/{name}/{nickname?}','WelcomeUserController@index');
 
