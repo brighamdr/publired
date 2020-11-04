@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuarios', 'UserController@index');
+//Route::get('/crearCliente', 'ClienteController@create');
 
-Route::get('/usuarios/{id}','UserController@show');
+//Route::get('/usuarios/{id}','UserController@show');
 
-Route::get('/saludo/{name}/{nickname?}','WelcomeUserController@index');
-
+//Route::get('/saludo/{name}/{nickname?}','WelcomeUserController@index');
+Route::resource('cliente','ClienteController');

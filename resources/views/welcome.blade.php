@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="/usuarios">Usuarios</a>
+                    <a href="/cliente/create">Nuevo Cliente</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
