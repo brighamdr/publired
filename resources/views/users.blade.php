@@ -33,9 +33,10 @@
     <div class="container col-md-4">
       <h1>Agregar nuevo usuario</h1>
       <br>
-      <form action="" method="post">
+      <form action="" method="post" enctype="multipart/form-data">
+        
         <div class="form-group">
-          <label for="nombre">Nombre y Aepplidos</label>
+          <label for="nombre">NOMBRE Y APELLIDOS</label>
           <input type="text" class="form-control">
         </div>
 
