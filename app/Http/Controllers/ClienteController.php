@@ -14,7 +14,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $datos['clientes'] = Cliente::paginate(5);
+        $datos['clientes'] = Cliente::paginate();
         return view ('listaCliente',$datos);
     }
 
@@ -44,7 +44,8 @@ class ClienteController extends Controller
         }
 
         Cliente::insert($datosCliente);
-        return response() -> json($datosCliente);
+        //return response() -> json($datosCliente);
+        return redirect('cliente');
     }
 
     /**
@@ -87,8 +88,9 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cliente $cliente)
+    public function destroy($id)
     {
-        //
+        Cliente::destroy($id);
+        return redirect('cliente');
     }
 }

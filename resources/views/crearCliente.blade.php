@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Clientes <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/cliente">Clientes <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Servicios</a>
@@ -90,9 +90,13 @@
           <input type="text" class="form-control" name="clave">
           </div>
       </div>
-
-      <div class="form-group">
-        <input type="submit" class="btn btn-success btn-block" value ="GUARDAR" >
+      <div class="form-row">
+        <div class="form-group col">
+          <input type="submit" class="btn btn-success btn-block" value ="GUARDAR" >
+        </div>
+        <div class="form-group col">
+          <input class="btn btn-primary btn-block" type="reset" value="LIMPIAR">
+        </div>
       </div>
 
       </form>

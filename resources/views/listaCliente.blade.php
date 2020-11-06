@@ -21,7 +21,7 @@
               <a class="nav-link" href="#">Clientes <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+              <a class="nav-link" href="/cliente/create">Nuevo Cliente</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contacto</a>
@@ -64,7 +64,15 @@
                         <td>{{$cliente->ip}}</td>
                         <td>{{$cliente->mac}}</td>
                         <td>{{$cliente->equipo}}</td>
-                        <td>Editar | Borrar</td>
+                        <td>Editar | 
+                          
+                          <form action="{{url('/cliente/'.$cliente->id)}}" method="post">
+                          {{csrf_field()}}
+                          {{method_field('DELETE')}}
+                          <button class="btn btn-danger" type="submit" onclick="return confirm('¿Desea Eliminar?')">Borrar</button>
+                          </form>
+
+                        </td>
                     </tr>                    
                 @endforeach
             </tbody>
